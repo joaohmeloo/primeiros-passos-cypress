@@ -1,19 +1,26 @@
+import userData from '../fixtures/userData.json'
+import selectorsList from '../fixtures/selectorsList.json'
+
 describe('Orange GRM Tests', () => {
+
+
+
   it('Login - Success', () => {
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-    cy.get("[name='username']").type('Admin')
-    cy.get("[name='password']").type('admin123')
-    cy.get("[type='submit']").click()
+    cy.get(selectorsList.usernameField).type(userData.userSuccess.username)
+    cy.get(selectorsList.passwordField).type(userData.userSuccess.password)
+    cy.get(selectorsList.loginButton).click()
     cy.location('pathname').should('equal', '/web/index.php/dashboard/index')
-    cy.get('.oxd-topbar-header-breadcrumb-module').contains('Dashboard')
+    cy.get(selectorsList.dashboardGrid)
   })
 
   it('Login - Fail (Wrong password)', () => {
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-    cy.get("[name='username']").type('Admin')
-    cy.get("[name='password']").type('wrongPassword')
-    cy.get("[type='submit']").click()
-    cy.get('.oxd-alert-content > .oxd-text').contains('Invalid credentials')
-
+    cy.get(selectorsList.usernameField).type(userData.userFail.username)
+    cy.get(selectorsList.passwordField).type(userData.userFail.password)
+    cy.get(selectorsList.loginButton).click()
+    cy.get(selectorsList.wrongCredentialAlert).contains('Invalid credentials')
   })
-})
+}
+
+)

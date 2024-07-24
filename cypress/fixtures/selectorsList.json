@@ -1,0 +1,9 @@
+{
+    "usernameField": "[name='username']",
+    "passwordField": "[name='password']",
+    "loginButton": "[type='submit']",
+    "sectionTitleTopBar": ".oxd-topbar-header-breadcrumb-module",
+    "dashboardGrid": ".orangehrm-dashboard-grid",
+    "wrongCredentialAlert": "[role='alert']"
+  }
+  
