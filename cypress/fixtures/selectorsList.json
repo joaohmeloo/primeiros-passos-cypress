@@ -1,17 +1,6 @@
 {
-    "usernameField": "[name='username']",
-    "passwordField": "[name='password']",
-    "loginButton": "[type='submit']",
-    "sectionTitleTopBar": ".oxd-topbar-header-breadcrumb-module",
-    "dashboardGrid": ".orangehrm-dashboard-grid",
-    "wrongCredentialAlert": "[role='alert']",
-    "myInfoButton": "[href='/web/index.php/pim/viewMyDetails']",
-    "firstNameField": "[name='firstName']",
-    "lastNameField": "[name='lastName']",
-    "genericField": ".oxd-input--active",
-    "placeHoldersDate": ".oxd-date-input",
-    "dateCloseButton": ".--close",
-    "selectTextButton":".oxd-select-text",
-    "saveButton": ".oxd-button--secondary"
+    
+    "sectionTitleTopBar": ".oxd-topbar-header-breadcrumb-module"
+    
   }
   
